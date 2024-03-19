@@ -2,32 +2,50 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
+@layer base {
+  html {
+    color: theme(colors.zinc.900);
+  }
 
-@media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    /* --------------- Text tokens --------------- */
+    --text-primary: theme(colors.zinc.900);
+    --text-secondary: theme(colors.zinc.500);
+    --text-inverted: theme(colors.white);
+    --text-placeholder: theme(colors.zinc.400);
+
+    /* --------------- Background tokens --------------- */
+
+    /* ---- Button tokens ---- */
+    --bg-button-primary: theme(colors.zinc.800);
+    --bg-button-primary-hover: theme(colors.zinc.950);
+    --bg-button-secondary: theme(colors.white);
+    --bg-button-special: #1679fa;
+
+    /* ---- Form element tokens ---- */
+    --bg-form-element: theme(colors.zinc.100);
+    --bg-form-element-hover: theme(colors.zinc.200);
+    --bg-form-element-active: theme(colors.zinc.200);
+
+    /* ---- Overlay tokens ---- */
+    --bg-overlay: rgba(39, 39, 42, 0.5);
+
+    /* --------------- Effect tokens --------------- */
+    --effect-button-secondary: 0px 2px 2px rgba(39, 40, 44, 0.08),
+      0px 0px 0px 1px rgba(32, 33, 37, 0.08);
+    --effect-button-secondary-hover: 0px 2px 2px rgba(39, 40, 44, 0.08),
+      0px 0px 0px 1px rgba(32, 33, 37, 0.16);
+    --effect-button-special: 0px 2px 3px rgba(7, 19, 42, 0.19),
+      0px 0px 0px 1px #0b6ff8, inset 0px 1px 0px rgba(255, 255, 255, 0.25);
+    --effect-checkbox: 0px 1px 2px rgba(3, 7, 18, 0.2), 0px 0px 0px 1px #e5e7eb;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+html {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.yNHHyP-marker-view:is(:hover, :has(button[data-active]), [data-state="open"]) {
+  z-index: 9999 !important;
 }
