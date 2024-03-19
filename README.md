@@ -1,6 +1,6 @@
 <!-- PROJECT LOGO -->
 
-[![Artifact](https://i.imgur.com/4lrud7k.png)](https://artifact.com)
+[![Roots](https://i.imgur.com/4lrud7k.png)](https://roots.better-beginnings.agency)
 
 ## About the project
 
