@@ -51,7 +51,7 @@ export function Navbar() {
         <QuerySearch />
       </div>
       <div className="flex items-center gap-4 max-[1060px]:hidden">
-        <BetterBeginnings />
+        <BetterBeginnings className="[&>svg]:translate-y-px" />
         <hr className="h-5 w-px bg-zinc-200" />
         <div className="flex items-center gap-2">
           <Button variant="secondary">Ver el código</Button>

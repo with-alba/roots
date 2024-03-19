@@ -9,7 +9,7 @@ export function BetterBeginnings({
   return (
     <a
       className={cn(
-        "inline-flex h-[36px] items-center gap-1 rounded-lg border border-black/[0.07] bg-[linear-gradient(90deg,_rgba(255,_232,_232,_0.5)_0%,_rgba(255,_254,_233,_0.5)_19.5%,_rgba(242,_255,_235,_0.5)_43.5%,_rgba(236,_255,_249,_0.5)_67%,_rgba(239,_237,_255,_0.5)_83%,_rgba(255,_239,_249,_0.5)_100%)] px-3 text-sm font-medium text-black/[0.7] shadow-[inset_0px_-1px_0px_rgba(0,_0,_0,_0.07)] transition-all hover:text-black hover:saturate-200",
+        "inline-flex h-[36px] flex-shrink-0 items-center justify-center gap-1 rounded-lg border border-black/[0.07] bg-[linear-gradient(90deg,_rgba(255,_232,_232,_0.5)_0%,_rgba(255,_254,_233,_0.5)_19.5%,_rgba(242,_255,_235,_0.5)_43.5%,_rgba(236,_255,_249,_0.5)_67%,_rgba(239,_237,_255,_0.5)_83%,_rgba(255,_239,_249,_0.5)_100%)] px-3 text-sm font-medium text-black/[0.7] shadow-[inset_0px_-1px_0px_rgba(0,_0,_0,_0.07)] transition-all hover:text-black hover:saturate-200",
         className,
       )}
       href="/"
@@ -17,7 +17,6 @@ export function BetterBeginnings({
     >
       Hecho por{" "}
       <svg
-        className="flex-shrink-0 translate-y-px"
         fill="none"
         height="17"
         viewBox="0 0 134 17"
