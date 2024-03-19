@@ -14,11 +14,11 @@ Our project takes a different path. By addressing the core issues that make prop
 
 ### Built With
 
-- [Next.js](https://nextjs.org/?ref=artifact.com)
-- [tRPC](https://trpc.io/?ref=artifact.com)
-- [React.js](https://reactjs.org/?ref=artifact.com)
-- [Tailwind CSS](https://tailwindcss.com/?ref=artifact.com)
-- [Supabase](https://supabase.com/?ref=artifact.com)
+- [Next.js](https://nextjs.org/?ref=roots.better-beginnings.agency)
+- [tRPC](https://trpc.io/?ref=roots.better-beginnings.agency)
+- [React.js](https://reactjs.org/?ref=roots.better-beginnings.agency)
+- [Tailwind CSS](https://tailwindcss.com/?ref=roots.better-beginnings.agency)
+- [Supabase](https://supabase.com/?ref=roots.better-beginnings.agency)
 
 ## Contact us
 
@@ -42,16 +42,16 @@ Here is what you need to be able to run Artifact.
 
 ### Setup
 
-1. Clone the repo into a public GitHub repository (or fork https://github.com/calcom/cal.com/fork). If you plan to distribute the code, keep the source code public to comply with [AGPLv3](https://github.com/calcom/cal.com/blob/main/LICENSE).
+1. Clone the repo into a public GitHub repository (or fork https://github.com/Better-Beginnings/roots/fork). If you plan to distribute the code, keep the source code public to comply with [AGPLv3](https://github.com/Better-Beginnings/roots/blob/main/LICENSE).
 
    ```sh
-   git clone https://github.com/calcom/cal.com.git
+   git clone https://github.com/Better-Beginnings/roots.git
    ```
 
 2. Go to the project folder
 
    ```sh
-   cd artifact.com
+   cd roots
    ```
 
 3. Install packages with npm
