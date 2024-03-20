@@ -1,10 +1,10 @@
 <!-- PROJECT LOGO -->
 
-[![Roots](https://i.imgur.com/kFrHnc2.png)](https://roots.withalba.com)
+[![Roots](https://i.imgur.com/4lrud7k.png)](https://roots.withalba.com)
 
 ## About the project
 
-<img width="100%" alt="Project's thumbnail" src="https://i.imgur.com/JbWByDW.png">
+<img width="100%" alt="Project's thumbnail" src="https://i.imgur.com/kFrHnc2.png">
 
 # Real Estate Reimagined: Open, Accessible, Unmatched.
 
