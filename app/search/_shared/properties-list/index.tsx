@@ -71,9 +71,7 @@ export function PropertiesList({
 
   return (
     <div className="h-full w-full space-y-6 px-6 py-6">
-      <p className="text-sm font-medium">
-        Mas de {totalCount} propiedades en venta en la zona
-      </p>
+      <p className="text-sm font-medium">{totalCount} propiedades en la zona</p>
       <div className="grid grid-cols-1 gap-x-8 gap-y-6 md:grid-cols-2 2xl:grid-cols-3">
         {data!.map((property) => {
           return <PropertyItem key={property.id} property={property} />;
