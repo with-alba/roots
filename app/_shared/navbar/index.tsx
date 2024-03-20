@@ -60,7 +60,7 @@ export function Navbar() {
             })}
             href="https://github.com/with-alba/roots"
           >
-            Ver código
+            <span className="px-1">Ver código</span>
           </a>
           <Button disabled>Contribuir</Button>
         </div>

@@ -52,7 +52,7 @@ export default function Home() {
             })}
             href="https://github.com/with-alba/roots"
           >
-            Ver código en GitHub
+            <span className="px-1">Ver código en GitHub</span>
           </a>
         </div>
       </div>

@@ -37,7 +37,7 @@ export function MapErrorState() {
             })}
             href="https://github.com/with-alba/roots"
           >
-            Ver código
+            <span className="px-1">Ver código</span>
           </a>
         </div>
       </div>
