@@ -21,7 +21,7 @@ export const PropertyAttributesModalContent = ({
 
   // Sort the groups. The "Principales" group should be first, then the rest of the groups. Then render.
   return Object.entries(groupedAttributes)
-    .toSorted((a, b) => {
+    .sort((a, b) => {
       if (a[0] === "Principales") return -1;
       if (b[0] === "Principales") return 1;
 
