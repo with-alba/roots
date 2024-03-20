@@ -59,6 +59,8 @@ export function Navbar() {
               variant: "secondary",
             })}
             href="https://github.com/with-alba/roots"
+            rel="noopener noreferrer"
+            target="_blank"
           >
             <span className="px-1">Ver código</span>
           </a>

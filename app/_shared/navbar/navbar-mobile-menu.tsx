@@ -12,7 +12,12 @@ export function NavbarMobileMenu() {
       </DialogMobile.Trigger>
       <DialogMobile.Content className="px-4 pb-4" responsiveAt={960}>
         <BrandButton className="w-full justify-center" />
-        <a className="mt-4 py-2 hover:underline" href="/">
+        <a
+          className="mt-4 py-2 hover:underline"
+          href="https://github.com/with-alba/roots"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
           Ver código
         </a>
       </DialogMobile.Content>
