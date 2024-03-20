@@ -1,6 +1,6 @@
 <!-- PROJECT LOGO -->
 
-[![Roots](https://i.imgur.com/4lrud7k.png)](https://roots.better-beginnings.agency)
+[![Roots](https://i.imgur.com/4lrud7k.png)](https://roots.withalba.com)
 
 ## About the project
 
@@ -14,11 +14,11 @@ Our project takes a different path. By addressing the core issues that make prop
 
 ### Built With
 
-- [Next.js](https://nextjs.org/?ref=roots.better-beginnings.agency)
-- [tRPC](https://trpc.io/?ref=roots.better-beginnings.agency)
-- [React.js](https://reactjs.org/?ref=roots.better-beginnings.agency)
-- [Tailwind CSS](https://tailwindcss.com/?ref=roots.better-beginnings.agency)
-- [Supabase](https://supabase.com/?ref=roots.better-beginnings.agency)
+- [Next.js](https://nextjs.org/?ref=roots.withalba.com)
+- [tRPC](https://trpc.io/?ref=roots.withalba.com)
+- [React.js](https://reactjs.org/?ref=roots.withalba.com)
+- [Tailwind CSS](https://tailwindcss.com/?ref=roots.withalba.com)
+- [Supabase](https://supabase.com/?ref=roots.withalba.com)
 
 ## Contact us
 
@@ -42,10 +42,10 @@ Here is what you need to be able to run Artifact.
 
 ### Setup
 
-1. Clone the repo into a public GitHub repository (or fork https://github.com/Better-Beginnings/roots/fork). If you plan to distribute the code, keep the source code public to comply with [AGPLv3](https://github.com/Better-Beginnings/roots/blob/main/LICENSE).
+1. Clone the repo into a public GitHub repository (or fork https://github.com/with-alba/roots/fork). If you plan to distribute the code, keep the source code public to comply with [AGPLv3](https://github.com/with-alba/roots/blob/main/LICENSE).
 
    ```sh
-   git clone https://github.com/Better-Beginnings/roots.git
+   git clone https://github.com/with-alba/roots.git
    ```
 
 2. Go to the project folder

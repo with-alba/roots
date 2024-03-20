@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Button } from "~/components/ui";
-import { BetterBeginnings } from "../leaf-button";
+import { BrandButton } from "../brand-button";
 import { QuerySearch } from "./navbar-query-search";
 import { NavbarMobileMenu } from "./navbar-mobile-menu";
 
@@ -50,8 +50,8 @@ export function Navbar() {
         </Link>
         <QuerySearch />
       </div>
-      <div className="flex items-center gap-4 max-[1060px]:hidden">
-        <BetterBeginnings className="[&>svg]:translate-y-px" />
+      <div className="flex items-center gap-4 max-[960px]:hidden">
+        <BrandButton />
         <hr className="h-5 w-px bg-zinc-200" />
         <div className="flex items-center gap-2">
           <Button variant="secondary">Ver el código</Button>

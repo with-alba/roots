@@ -1,6 +1,6 @@
 import { SparklesIcon } from "@heroicons/react/20/solid";
 import { Button } from "~/components/ui";
-import { BetterBeginnings } from "./_shared/leaf-button";
+import { BrandButton } from "./_shared/brand-button";
 import { IndexQuerySearch } from "./_shared/index-query-search";
 
 export default function Home() {
@@ -27,7 +27,7 @@ export default function Home() {
           </svg>
 
           <div className="space-y-2">
-            <BetterBeginnings className="w-full justify-center" />
+            <BrandButton className="w-full justify-center" />
             <IndexQuerySearch />
           </div>
         </div>
