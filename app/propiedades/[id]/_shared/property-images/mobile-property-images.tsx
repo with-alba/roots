@@ -1,6 +1,5 @@
 "use client";
 
-import { useRouter } from "next/navigation";
 import { Carousel } from "~/components/ui";
 
 interface MobilePropertyImagesProps {
@@ -10,10 +9,9 @@ interface MobilePropertyImagesProps {
 export function MobilePropertyImages({
   propertyImages,
 }: MobilePropertyImagesProps) {
-  const router = useRouter();
-
   const handleImageClick = (index: number) => {
-    router.push(`?image=${index}`);
+    // Using the browser's native API to update the URL instantly
+    window.history.pushState({}, "", `?image=${index}`);
   };
 
   return (

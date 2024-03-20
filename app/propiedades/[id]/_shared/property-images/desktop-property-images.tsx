@@ -1,7 +1,5 @@
 "use client";
 
-import { useRouter } from "next/navigation";
-import { startTransition } from "react";
 import { ScrollArea } from "~/components/ui";
 import { cn } from "~/lib/utils";
 
@@ -12,12 +10,9 @@ interface DesktopPropertyImagesProps {
 export function DesktopPropertyImages({
   propertyImages,
 }: DesktopPropertyImagesProps) {
-  const router = useRouter();
-
   const handleImageClick = (index: number) => {
-    startTransition(() => {
-      router.push(`?image=${index}`);
-    });
+    // Using the browser's native API to update the URL instantly
+    window.history.pushState({}, "", `?image=${index}`);
   };
   return (
     <ScrollArea.Root className="flex-1 max-xl:hidden">
