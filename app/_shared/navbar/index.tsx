@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Button } from "~/components/ui";
+import { Button, buttonVariants } from "~/components/ui";
 import { BrandButton } from "../brand-button";
 import { QuerySearch } from "./navbar-query-search";
 import { NavbarMobileMenu } from "./navbar-mobile-menu";
@@ -54,8 +54,15 @@ export function Navbar() {
         <BrandButton />
         <hr className="h-5 w-px bg-zinc-200" />
         <div className="flex items-center gap-2">
-          <Button variant="secondary">Ver el código</Button>
-          <Button>Contribuir</Button>
+          <a
+            className={buttonVariants().base({
+              variant: "secondary",
+            })}
+            href="https://github.com/with-alba/roots"
+          >
+            Ver código
+          </a>
+          <Button disabled>Contribuir</Button>
         </div>
       </div>
       <NavbarMobileMenu />

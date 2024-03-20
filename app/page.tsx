@@ -1,5 +1,5 @@
 import { SparklesIcon } from "@heroicons/react/20/solid";
-import { Button } from "~/components/ui";
+import { buttonVariants } from "~/components/ui";
 import { BrandButton } from "./_shared/brand-button";
 import { IndexQuerySearch } from "./_shared/index-query-search";
 
@@ -41,13 +41,19 @@ export default function Home() {
             </p>
           </div>
           <p className="text-pretty">
-            En Artifact estamos siempre trabajando para que tu experiencia sea
-            la mejor posible. Aqui encontraras tu historial de busqueda,
-            recomendaciones y mas!
+            En Roots estamos siempre trabajando para que tu experiencia sea la
+            mejor posible. Aqui encontraras tu historial de busqueda,
+            recomendaciones y más!
           </p>
-          <Button className="max-w-fit" variant="secondary">
-            Ver codigo en GitHub
-          </Button>
+          <a
+            className={buttonVariants().base({
+              variant: "secondary",
+              className: "max-w-fit",
+            })}
+            href="https://github.com/with-alba/roots"
+          >
+            Ver código en GitHub
+          </a>
         </div>
       </div>
     </>

@@ -28,7 +28,7 @@ Meet our sales team for any commercial inquiries.
 
 ### Prerequisites
 
-Here is what you need to be able to run Artifact.
+Here is what you need to be able to run Roots.
 
 - Node.js (Version: >=18.x)
 - A Supabase project setup

@@ -33,7 +33,7 @@ export function PropertyDescription({ description }: PropertyDescriptionProps) {
         onClick={handleShowMore}
         type="button"
       >
-        {showMore ? "Mostrar menos" : "Mostrar mas"}
+        {showMore ? "Mostrar menos" : "Mostrar más"}
       </button>
     </p>
   );

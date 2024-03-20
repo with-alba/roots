@@ -6,7 +6,7 @@ import type {
 } from "@vis.gl/react-google-maps";
 import { ControlPosition, Map, MapControl } from "@vis.gl/react-google-maps";
 import { useRef } from "react";
-import { Button } from "~/components/ui";
+import { Button, buttonVariants } from "~/components/ui";
 import { usePrevious } from "~/lib/hooks";
 import { Loader } from "~/components/ui/loader";
 import type { InferRouterOutputs } from "~/lib/trpc/shared";
@@ -30,8 +30,15 @@ export function MapErrorState() {
           continuamente el servicio.
         </p>
         <div className="flex gap-3">
-          <Button>Contribuir</Button>
-          <Button variant="secondary">Ver el código</Button>
+          <Button disabled>Contribuir</Button>
+          <a
+            className={buttonVariants().base({
+              variant: "secondary",
+            })}
+            href="https://github.com/with-alba/roots"
+          >
+            Ver código
+          </a>
         </div>
       </div>
     </div>

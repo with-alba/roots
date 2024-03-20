@@ -20,7 +20,7 @@ export async function generateMetadata({
   const id = params.id;
 
   const property = await getProperty(id);
-  const title = `${property.propertyType} en ${property.location.address} | Artifact`;
+  const title = `${property.propertyType} en ${property.location.address} | Roots`;
   const thumbnail = property.thumbnail;
   const description = property.description;
 

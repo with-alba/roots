@@ -13,10 +13,7 @@ export function NavbarMobileMenu() {
       <DialogMobile.Content className="px-4 pb-4" responsiveAt={960}>
         <BrandButton className="w-full justify-center" />
         <a className="mt-4 py-2 hover:underline" href="/">
-          Ver el código
-        </a>
-        <a className="py-2 hover:underline" href="/">
-          Contribuir
+          Ver código
         </a>
       </DialogMobile.Content>
     </DialogMobile.Root>

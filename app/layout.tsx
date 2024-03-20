@@ -10,7 +10,7 @@ import thumbnail from "~/public/ogThumbnail.png";
 import { Navbar } from "./_shared/navbar";
 
 export const metadata: Metadata = {
-  title: "Artifact",
+  title: "Roots",
   openGraph: {
     images: thumbnail.src,
   },
