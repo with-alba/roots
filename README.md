@@ -1,6 +1,6 @@
 <!-- PROJECT LOGO -->
 
-[![Roots](https://i.imgur.com/4lrud7k.png)](https://roots.withalba.com)
+[![Roots](https://i.imgur.com/kFrHnc2.png)](https://roots.withalba.com)
 
 ## About the project
 
@@ -22,9 +22,9 @@ Our project takes a different path. By addressing the core issues that make prop
 
 ## Contact us
 
-Meet our sales team for any commercial inquiries.
+Meet us for any commercial inquiries or to discuss your project.
 
-<a href="https://cal.com/sales"><img src="https://cal.com/book-with-cal-dark.svg" alt="Book us with Cal.com"></a>
+<a href="https://cal.com/with-alba/alba-introduction-call"><img src="https://cal.com/book-with-cal-dark.svg" alt="Book us with Cal.com"></a>
 
 ### Prerequisites
 
