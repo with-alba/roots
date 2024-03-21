@@ -13,11 +13,17 @@ export const metadata: Metadata = {
   description:
     "Encontrá tu próximo hogar en Argentina. Buscá propiedades en venta y alquiler.",
   openGraph: {
+    title: "Roots",
     images: "https://i.imgur.com/fMR2vxZ.png",
+    description:
+      "Encontrá tu próximo hogar en Argentina. Buscá propiedades en venta y alquiler.",
   },
   twitter: {
+    title: "Roots",
     card: "summary_large_image",
     images: "https://i.imgur.com/fMR2vxZ.png",
+    description:
+      "Encontrá tu próximo hogar en Argentina. Buscá propiedades en venta y alquiler.",
   },
 };
 
