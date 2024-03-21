@@ -6,17 +6,18 @@ import type { Metadata } from "next";
 import { Toaster } from "sonner";
 import { GoogleMapsAPIProvider } from "~/components/shared/maps/api-provider";
 import { TRPCReactProvider } from "~/lib/trpc/react";
-import thumbnail from "~/public/ogThumbnail.png";
 import { Navbar } from "./_shared/navbar";
 
 export const metadata: Metadata = {
   title: "Roots",
+  description:
+    "Encontrá tu próximo hogar en Argentina. Buscá propiedades en venta y alquiler.",
   openGraph: {
-    images: thumbnail.src,
+    images: "https://i.imgur.com/fMR2vxZ.png",
   },
   twitter: {
     card: "summary_large_image",
-    images: thumbnail.src,
+    images: "https://i.imgur.com/fMR2vxZ.png",
   },
 };
 
