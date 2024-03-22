@@ -66,7 +66,8 @@ export const parseFilterValueToLabel = (
     return {
       attr,
       label: parseRangeToLabel({
-        ...value,
+        from: value.from ? Number(value.from).toLocaleString() : undefined,
+        to: value.to ? Number(value.to).toLocaleString() : undefined,
         // Need to check the type here because the type of the range is not the same as the type of the attribute
         unit: attr.type === "range" ? attr.unit?.name : "",
       }),
@@ -99,6 +100,7 @@ export const parseFiltersValues = (filters: FilterableAttributes) => {
       const hasRange = isRange(value);
       // Check if it's a range and whether one of its fields is empty
       const isRangeEmpty = hasRange && !value.from && !value.to;
+
       // Check if it's a range and whether its value is invalid
       const isRangeInvalidValue =
         hasRange && Boolean(value.to) && value.from! > value.to!;

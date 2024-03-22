@@ -11,10 +11,10 @@ export type Attribute = {
   type: AttributeType;
   group: string;
 } & (
-  | { type: "list"; values: AttributeValue[]; allowedUnits?: never }
+  | { type: "list"; values: AttributeValue[]; unit?: never }
   | { type: "range"; unit?: AttributeValue; values?: never }
-  | { type: "boolean"; values?: never; allowedUnits?: never }
-  | { type: "number"; values?: never; allowedUnits?: never }
+  | { type: "boolean"; values?: never; unit?: never }
+  | { type: "number"; values?: never; unit?: never }
 );
 
 export const attributes: Record<string, Attribute> = {
@@ -26,6 +26,13 @@ export const attributes: Record<string, Attribute> = {
       { id: "242075", name: "Venta" },
       { id: "242073", name: "Alquiler" },
     ],
+    group: "Principales",
+  },
+  price: {
+    id: "price",
+    name: "Precio",
+    type: "range",
+    unit: { id: "ARS", name: "ARS" },
     group: "Principales",
   },
   PROPERTY_TYPE: {

@@ -42,6 +42,31 @@ const parseRange = (range: Range, unit: string | undefined) => {
 };
 
 /**
+ * A function that parses a price to the format that MercadoLibre expects
+ * @param price - The price to be parsed
+ * @returns The price parsed to the format that MercadoLibre expects
+ */
+const parsePrice = (price: Range) => {
+  const scientificFrom = Number(price.from)
+    .toExponential()
+    .toUpperCase()
+    .replace("+", "");
+  const scientificTo = Number(price.to)
+    .toExponential()
+    .toUpperCase()
+    .replace("+", "");
+  if (!price.from && price.to) {
+    return `*-${scientificTo}`;
+  }
+
+  if (price.from && !price.to) {
+    return `${scientificFrom}-*`;
+  }
+
+  return `${scientificFrom}-${scientificTo}`;
+};
+
+/**
  * A function that parses a boolean to the format that MercadoLibre expects
  * @param value - The boolean to be parsed
  * @returns The boolean parsed to the format that MercadoLibre expects
@@ -62,6 +87,12 @@ const mercadoLibreInputParser = (input: z.infer<typeof propertiesFilters>) => {
     (acc, [key, value]) => {
       if (isRange(value)) {
         const attr = attributesMap[key];
+
+        if (key === "price") {
+          acc[key] = parsePrice(value);
+          return acc;
+        }
+
         acc[key] = parseRange(
           value,
           attr.type === "range" ? attr.unit?.id : "",
@@ -208,7 +239,7 @@ export const mercadoLibrePropertiesParser = async ({
   // check if the filter is present in the response. If not, it means
   // no results were found for that filter, so we should return an empty array.
   const meliFilters = json.filters.map((filter) => filter.id);
-  const inputFilters = Object.keys(omit(input, ["offset"]));
+  const inputFilters = Object.keys(omit(input, ["offset", "sort"]));
   const isFilterNotPresent = inputFilters.some(
     (key) => !meliFilters.includes(key),
   );

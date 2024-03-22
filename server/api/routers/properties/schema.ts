@@ -2,6 +2,8 @@ import { z } from "zod";
 import { range } from "~/lib/utils/range";
 
 export const propertiesFilters = z.object({
+  price: range.optional(),
+  sort: z.enum(["price_asc", "price_desc"]).optional(),
   item_location: z.string(),
   offset: z.number().optional(),
   OPERATION: z.array(z.string()).optional(),

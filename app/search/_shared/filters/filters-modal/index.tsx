@@ -14,7 +14,7 @@ export function FiltersModal() {
   const [open, setOpen] = useState(false);
   const [searchParams, setSearchParams] = useSearchPageSearchParams();
 
-  const filters = omit(searchParams, ["page", "view", "item_location"]);
+  const filters = omit(searchParams, ["page", "view", "item_location", "sort"]);
 
   const initial = {
     ...initialValues,

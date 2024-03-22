@@ -2,6 +2,7 @@
 
 import { useFormikContext } from "formik";
 import { match } from "ts-pattern";
+import { ExclamationCircleIcon } from "@heroicons/react/16/solid";
 import { Checkbox, Input, Select } from "~/components/ui";
 import type { Attribute } from "~/lib/mappings/attributes";
 import { attributes } from "~/lib/mappings/attributes";
@@ -120,39 +121,52 @@ export function FiltersModalContentForm() {
                       />
                     );
                   })
-                  .with({ type: "range" }, () => {
+                  .with({ type: "range" }, (data) => {
                     const range = values[id] as Range;
+
                     return (
-                      <div className="flex w-full flex-wrap items-center gap-2">
-                        <Input
-                          className="flex-1"
-                          id={attr.id}
-                          min={0}
-                          onChange={(e) => {
-                            const value = e.target.value;
-                            if (Number(value) < 0) {
-                              return;
-                            }
-                            void setFieldValue(`${id}.from`, value);
-                          }}
-                          placeholder="Desde"
-                          type="number"
-                          value={range.from}
-                        />
-                        <Input
-                          className="flex-1"
-                          min={0}
-                          onChange={(e) => {
-                            const value = e.target.value;
-                            if (Number(value) < 0) {
-                              return;
-                            }
-                            void setFieldValue(`${id}.to`, value);
-                          }}
-                          placeholder="Hasta"
-                          type="number"
-                          value={range.to}
-                        />
+                      <div className="w-full">
+                        {data.id === "price" ? (
+                          <span className="mb-2 flex items-start gap-2 space-y-1 rounded-l-sm border-l-2 border-orange-500 bg-orange-600/[4%] p-2 text-sm font-medium text-orange-950">
+                            <ExclamationCircleIcon className="size-4 translate-y-[5px]" />
+
+                            <p>
+                              Por el momento, solo aceptamos búsquedas con
+                              precios expresados en pesos argentinos.
+                            </p>
+                          </span>
+                        ) : null}
+                        <div className="flex w-full flex-wrap items-center gap-2">
+                          <Input
+                            className="flex-1"
+                            id={attr.id}
+                            min={0}
+                            onChange={(e) => {
+                              const value = e.target.value;
+                              if (Number(value) < 0) {
+                                return;
+                              }
+                              void setFieldValue(`${id}.from`, value);
+                            }}
+                            placeholder="Desde"
+                            type="number"
+                            value={range.from}
+                          />
+                          <Input
+                            className="flex-1"
+                            min={0}
+                            onChange={(e) => {
+                              const value = e.target.value;
+                              if (Number(value) < 0) {
+                                return;
+                              }
+                              void setFieldValue(`${id}.to`, value);
+                            }}
+                            placeholder="Hasta"
+                            type="number"
+                            value={range.to}
+                          />
+                        </div>
                       </div>
                     );
                   })

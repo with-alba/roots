@@ -6,6 +6,7 @@ import { getPagesToShow } from "~/components/ui/pagination";
 import { useSearchPageSearchParams } from "../context";
 import { PropertyItem } from "./property-item";
 import { PropertySkeleton } from "./property-skeleton";
+import { PropertiesSort } from "./properties-sort";
 
 interface PropertiesListProps {
   data:
@@ -26,7 +27,10 @@ export function PropertiesList({
   if (isLoading) {
     return (
       <div className="h-full w-full space-y-6 px-6 py-6">
-        <div className="h-5 w-full max-w-sm animate-pulse rounded bg-zinc-100" />
+        <div className="flex justify-between gap-2 max-[460px]:flex-col min-[460px]:items-center">
+          <div className="h-5 w-full max-w-sm animate-pulse rounded bg-zinc-100" />
+          <PropertiesSort />
+        </div>
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 md:grid-cols-2 2xl:grid-cols-3">
           {Array.from({ length: 10 }, (_, i) => {
             return <PropertySkeleton key={i} />;
@@ -71,7 +75,13 @@ export function PropertiesList({
 
   return (
     <div className="h-full w-full space-y-6 px-6 py-6">
-      <p className="text-sm font-medium">{totalCount} propiedades en la zona</p>
+      <div className="flex justify-between gap-2 max-[460px]:flex-col min-[460px]:items-center">
+        <p className="text-sm font-medium">
+          {totalCount} propiedades en la zona
+        </p>
+        <PropertiesSort />
+      </div>
+
       <div className="grid grid-cols-1 gap-x-8 gap-y-6 md:grid-cols-2 2xl:grid-cols-3">
         {data!.map((property) => {
           return <PropertyItem key={property.id} property={property} />;
